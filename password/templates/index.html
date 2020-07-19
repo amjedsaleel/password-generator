@@ -2,10 +2,15 @@
 {% load static %}
 {% block content %}
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-4">
-                <h1>Testing..</h1>
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-4 ">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <input type="text" class="input-box" name="password-length" placeholder="Enter Your Password Length"> <br>
+                        <input type="text" class="mt-2" value="3545465" placeholder="Your Password Will Appear Here...">
+                        <input type="submit" class="submit-btn btn btn-dark mt-2" name="submit" value="Generate Password">
+                    </form>
             </div>
         </div>
     </div>
-{% endblock  %}
+{% endblock %}

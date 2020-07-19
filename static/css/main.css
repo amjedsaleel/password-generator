@@ -1,7 +1,23 @@
 html, body {
+    margin: 0;
     height: 100vh;
 }
 
-h1 {
-    color: red;
+form {
+    margin-top: 12em;
 }
+
+input {
+    width: 100%;
+    height: 45px;
+    border: 2px solid #343A40;
+}
+
+::placeholder {
+    color: #36313B;
+}
+
+/*.submit-btn {*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*}*/
