@@ -8,7 +8,8 @@
                     {% csrf_token %}
                     <input type="text" class="input-box" name="password-length"
                            placeholder="Enter Your Password Length" required> <br>
-                    <input type="text" class="mt-2" value="3545465" placeholder="Your Password Will Appear Here...">
+                    <input type="text" class="mt-2" value="{{ password }}"
+                           placeholder="Your Password Will Appear Here...">
                     <input type="submit" class="submit-btn btn btn-dark mt-2" name="submit" value="Generate Password">
                 </form>
             </div>

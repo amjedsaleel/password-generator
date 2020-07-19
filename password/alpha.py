@@ -21,3 +21,4 @@ def generate(password_length):
         pass_list.append(value)
     password = ''.join([str(elem) for elem in pass_list])
     return password
+

@@ -1,18 +1,16 @@
 from django.shortcuts import render
-from . import alpha
+from .alpha import generate
 
 # Create your views here.
 
 
 def index(request):
+    generated_password = ''
     if request.method == "POST":
-        password_length = request.POST.get('password-length')
-        print(password_length)
+        password_length = int(request.POST.get('password-length'))
+        generated_password = generate(password_length)
 
-        gen = alpha.generate(int(password_length))
-        print(gen)
+        print(generated_password)
 
-    context = {}
+    context = {'password': generated_password}
     return render(request, 'index.html', context)
-
-
